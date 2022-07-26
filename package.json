@@ -1,5 +1,6 @@
 {
-  "name": "gulp",
+  "keywords": [],
+  "description": "",
   "version": "1.0.0",
   "license": "ISC",
   "main": "script.js",
@@ -52,5 +53,8 @@
     "minimatch": "^5.1.0",
     "@xmldom/xmldom": "^0.8.2",
     "lodash.template": "^4.5.0"
+  },
+  "scripts": {
+    "start": "sudo gulp"
   }
 }
