@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(content='width=device-width, initial-scale=1' name='viewport')
+    meta(content="" name="application-name")
+    meta(name="description" content="" )
+    meta(name="keywords" content="" )
+    title Title
+
+    meta(property="og:site_name" content="" )
+    meta(property="og:type" content="" )
+    meta(property="og:title" content="" )
+    meta(property="og:description" content="" )
+    meta(property="og:url" content="" )
+    meta(property="og:image" content="" )
+    meta(content="#212529" name="msapplication-TileColor")
+    meta(content='#212529' name='msapplication-navbutton-color')
+    meta(content="#212529" name="theme-color")
+    meta(content='#212529' name='apple-mobile-web-app-status-bar-style')
+    meta(content="./images/icon-180x180.png" name="msapplication-TileImage")
+
+    link(href="./images/icon-120x120.png" rel="apple-touch-icon" size="120x120")
+    link(href="./images/icon-96x96.png" rel="icon" sizes="96x96" type="image/png")
+    link(href="./images/icon-180x180.png" rel="icon" sizes="180x180" type="image/png")
+
+    link(rel='preload' as="style" href="./css/style.css" onload="this.rel='stylesheet'")
+    noscript
+      link(charset='utf-8' href='./css/style.css' rel='stylesheet' type='text/css')
+
+    link(rel="preload" as="script" href="./js/app.js" onload="var script = document.createElement('script'); script.src = this.href; document.body.appendChild(script);")
+
+    link(href='images/favicon.png' rel='shortcut icon' type='image/png')
+  body
+    #app
+      include ../includes/header
+      main.main
+        block page
+      include ../includes/footer
+
+    noscript
+      script(src="./js/app.js")
+

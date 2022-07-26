@@ -1,0 +1,56 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "license": "ISC",
+  "main": "script.js",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.4",
+    "browser-sync": "^2.27.9",
+    "css-loader": "^6.7.1",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-embed-svg": "^1.4.8",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-stream": "^7.0.0"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "alpinejs": "^3.9.1",
+    "boxicons": "^2.1.2",
+    "glightbox": "^3.2.0",
+    "imask": "^6.4.2",
+    "swiper": "^8.0.7",
+    "ymaps": "^0.2.1"
+  },
+  "repository": {},
+  "author": "Pavel Ratnikov <pasha@devflow.ru>",
+  "private": true,
+  "overrides": {
+    "chokidar": "^3.5.3",
+    "uuid": "^8.3.2",
+    "superagent": "^8.0.0",
+    "formidable": "^2.0.1",
+    "svgo": "^2.8.0",
+    "file-type": "^17.1.4",
+    "glob-parent": "^6.0.2",
+    "lodash": "^4.17.21",
+    "minimatch": "^5.1.0",
+    "@xmldom/xmldom": "^0.8.2",
+    "lodash.template": "^4.5.0"
+  }
+}
