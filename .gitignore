@@ -1,6 +1,7 @@
 .DS_Store
 build.zip
 /node_modules/*
+package-lock.json
 .sass-cache
 Build/Iconr
 yarn.lock
