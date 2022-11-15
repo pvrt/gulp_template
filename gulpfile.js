@@ -35,6 +35,7 @@ const path = {
     css: "./build/css/",
     js: "./build/js/",
     images: "./build/images/",
+    svg: "./build/svg/",
     fonts: "./build/fonts/"
   }
 }
@@ -87,16 +88,21 @@ function svg() {
   return gulp.src(path.source.svg + "**/*")
     .pipe(svgmin({
       multipass: true,
+      full: true,
       plugins: [
+        'preset-default',
         'sortAttrs',
         'removeComments',
-        'removeXMLNS',
         'removeEmptyAttrs',
         'removeEmptyText',
         'removeEmptyContainers',
         'removeUselessStrokeAndFill',
+        'removeViewBox',
         {
-          name: 'removeViewBox'
+          name: 'removeAttrs',
+          params: {
+            attrs: '(fill|stroke)'
+          }
         },
         {
           name: 'cleanupIDs',
@@ -106,7 +112,7 @@ function svg() {
         }
       ]
     }))
-    .pipe(gulp.dest(path.source.svg));
+    .pipe(gulp.dest(path.build.svg));
 }
 
 /* -------------------------
@@ -143,8 +149,8 @@ function pages() {
       pretty: true
     }))
     .pipe(embedSvg({
-      selectors: '[inline]',
-      root: './source/svg'
+      selectors: 'img[src*="svg"] ',
+      root: './build/svg'
     }))
     .pipe(gulp.dest(path.build.root))
     .pipe(browsersync.stream())
@@ -179,8 +185,8 @@ watch
 function watchFiles() {
   gulp.watch(path.source.scss + "**/*", styles);
   gulp.watch(path.source.js + "**/*", scripts);
-  gulp.watch(path.source.pug + "**/*", pages);
   gulp.watch(path.source.svg + "**/*", svg);
+  gulp.watch(path.source.pug + "**/*", pages);
   gulp.watch(path.source.images + "**/*", images);
   gulp.watch(path.source.static + "**/*", static);
 }
@@ -189,8 +195,8 @@ function watchFiles() {
 tasks
 ------------------------- */
 const build = gulp.series(
-  svg,
   clean,
+  svg,
   gulp.parallel(
     static,
     fontsWoff,
