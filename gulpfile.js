@@ -35,7 +35,7 @@ const path = {
     css: "./build/css/",
     js: "./build/js/",
     images: "./build/images/",
-    svg: "./build/svg/",
+    svg: "./build/images/svg/",
     fonts: "./build/fonts/"
   }
 }
@@ -149,8 +149,8 @@ function pages() {
       pretty: true
     }))
     .pipe(embedSvg({
-      selectors: 'img[src*="svg"] ',
-      root: './build/svg'
+      selectors: 'svg[src*="svg"]',
+      root: './build/images/svg'
     }))
     .pipe(gulp.dest(path.build.root))
     .pipe(browsersync.stream())

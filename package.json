@@ -31,12 +31,7 @@
     "defaults"
   ],
   "dependencies": {
-    "alpinejs": "^3.9.1",
-    "boxicons": "^2.1.2",
-    "glightbox": "^3.2.0",
-    "imask": "^6.4.2",
-    "swiper": "^8.0.7",
-    "ymaps": "^0.2.1"
+    "alpinejs": "^3.11.1"
   },
   "repository": {},
   "author": "Pavel Ratnikov <pasha@devflow.ru>",
@@ -52,7 +47,8 @@
     "lodash": "^4.17.21",
     "minimatch": "^5.1.0",
     "@xmldom/xmldom": "^0.8.2",
-    "lodash.template": "^4.5.0"
+    "lodash.template": "^4.5.0",
+    "fsevents": "^2.3.2"
   },
   "scripts": {
     "start": "sudo gulp"
