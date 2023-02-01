@@ -47,8 +47,10 @@
     "lodash": "^4.17.21",
     "minimatch": "^5.1.0",
     "@xmldom/xmldom": "^0.8.2",
-    "lodash.template": "^4.5.0",
-    "fsevents": "^2.3.2"
+    "lodash.template": "^4.5.0"
+  },
+  "resolutions": {
+    "fsevents": "2.3.2"
   },
   "scripts": {
     "start": "sudo gulp"
