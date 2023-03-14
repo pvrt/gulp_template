@@ -48,7 +48,7 @@ function browserSync(done) {
     server: {
       baseDir: path.build.root
     },
-    port: 80,
+    port: 3000,
     ui: false,
     ghostMode: {
       clicks: false,

@@ -1,2 +1,15 @@
-$font: 'montserrat', sans-serif, $system;
-$transition: all 150ms ease-in-out;
+:root {
+  --font: 'montserrat', sans-serif;
+  --transition: all 150ms ease-in-out;
+  --font-size:14px;
+
+  --c-black: #062033;
+  --c-gray-2: #B7B7B7;
+  --c-gray-1: #D9D9D9;
+  --c-primary: #72C3FF;
+  --c-primary-light: #9FCFF1;
+
+  --edge-padding:24px;
+  --section-spacing:60px;
+}
+
