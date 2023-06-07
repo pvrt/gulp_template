@@ -32,11 +32,10 @@ html
 
     link(href='images/favicon.png' rel='shortcut icon' type='image/png')
   body
-    #app
-      include ../includes/header
-      main.main
-        block page
-      include ../includes/footer
+    include ../includes/header
+    main.main
+      block page
+    include ../includes/footer
 
     noscript
       script(src="./js/app.js")
